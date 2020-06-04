@@ -44,7 +44,7 @@ app.get('/profile/:id',(req,res)=>{profile.handleProfile(req,res,postgres)});
 app.put('/image',(req,res)=>{image.handleImage(req,res,postgres)});
 app.post('/apiHandler',(req,res)=>{image.apiHandler(req,res)})
 
-app.listen(3006, ()=>{
-    console.log('App is running on Port 3006');
+app.listen(process.env.PORT || 3006, ()=>{
+    console.log(`App is running on ${process.env.PORT}`);
 })
 
