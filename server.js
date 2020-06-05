@@ -14,10 +14,9 @@ const image=require('./controllers/image')
 const postgres=knex({
     client: 'pg',
     connection: {
-    host : '127.0.0.1',
-    user : 'postgres',
-    password : 'Rahul@1402',
-    database : 'FaceDetector'
+        connectionString: process.env.DATABASE_URL,
+        ssl:true,
+   
 }});
 
 
